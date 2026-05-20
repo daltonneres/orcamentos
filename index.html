@@ -89,8 +89,9 @@
 
     .pricing {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 24px;
+      align-items: stretch;
     }
 
     .price-card {
@@ -100,12 +101,18 @@
       padding: 40px;
       display: flex;
       flex-direction: column;
+      min-height: 760px;
+      transition: 0.3s ease;
+    }
+
+    .price-card:hover {
+      transform: translateY(-5px);
+      border-color: #38ef7d;
     }
 
     .price-card.highlight {
       background: #38ef7d;
       color: black;
-      transform: scale(1.03);
     }
 
     .price-card h2 {
@@ -121,10 +128,13 @@
     .price-card ul {
       list-style: none;
       flex: 1;
+      margin-top: 10px;
     }
 
     .price-card li {
       margin-bottom: 12px;
+      font-size: 15px;
+      line-height: 1.5;
     }
 
     .btn {
@@ -188,6 +198,36 @@
 
       .section-title {
         font-size: 36px;
+      }
+
+      .container {
+        padding: 30px 16px;
+      }
+
+      .hero {
+        padding: 40px 0;
+      }
+
+      .price-card {
+        min-height: auto;
+        padding: 30px;
+      }
+
+      .card,
+      .features {
+        padding: 24px;
+      }
+
+      .price-card h2 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      footer {
+        flex-direction: column;
       }
     }
   </style>
@@ -315,7 +355,8 @@
           <li>• Ajustes e melhorias básicas</li>
           <li>• Suporte Google Play</li>
           <li>• Estabilidade e monitoramento</li>
-          <li
+          <li>• Atendimento prioritário</li>
+        </ul>
 
         <button class="btn btn-light">Contratar Plano</button>
       </div>
